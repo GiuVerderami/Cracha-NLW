@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+  height: 100%;
+  font-family: 'roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--gray);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  main {
+    background: url(images/desktop.svg) no-repeat center/cover;
+    width: 100vw;
+    min-height: 812px;
+    height: 100vh;
+  }
+
+  .avatar > img {
+    animation-name: animacao;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+  }
+
+  @keyframes animacao {
+    0% {
+      transform: rotateY(0deg);
+    }
+
+    5% {
+      transform: rotateY(45deg);
+    }
+
+    10% {
+      transform: rotateY(90deg);
+    }
+
+    20% {
+      transform: rotateY(180deg);
+    }
+
+    30% {
+      transform: rotateY(90deg);
+    }
+
+    35% {
+      transform: rotateY(45deg);
+    }
+
+    40% {
+      transform: rotateY(0deg);
+    }
+
+    45% {
+      transform: rotateY(45deg);
+    }
+
+    50% {
+      transform: rotateY(90deg);
+    }
+
+    60% {
+      transform: rotateY(180deg);
+    }
+
+    70% {
+      transform: rotateY(90deg);
+    }
+
+    75% {
+      transform: rotateY(45deg);
+    }
+
+    80% {
+      transform: rotateY(0deg);
+    }
+
+    85% {
+      transform: rotateY(45deg);
+    }
+
+    90% {
+      transform: rotateY(90deg);
+    }
+
+    92% {
+      transform: rotateY(180deg);
+    }
+
+    95% {
+      transform: rotateY(90deg);
+    }
+
+    97% {
+      transform: rotateY(45deg);
+    }
+
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+}
